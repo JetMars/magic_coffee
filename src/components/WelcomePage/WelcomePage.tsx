@@ -12,13 +12,13 @@ const WelcomePage: React.FC = () => {
         <Logo />
       </div>
       <h2 className={styles.title}>Feel yourself like a barista!</h2>
-      <div className={styles.descr}>Magic coffee on order.</div>
+      <div className={styles.desc}>Magic coffee on order.</div>
       <div className={styles.dots}>
         <div className={styles["dot-active"]}></div>
         <div className={styles.dot}></div>
         <div className={styles.dot}></div>
       </div>
-      <NextPage margin={{ mt: "8rem", mr: "4.7rem", mb: "5rem" }} />
+      <NextPage margin="welcome-page" />
     </section>
   );
 };
