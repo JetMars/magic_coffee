@@ -1,5 +1,11 @@
+import WelcomePage from "./components/WelcomePage/WelcomePage";
+
 function App() {
-  return <></>;
+  return (
+    <div className="container">
+      <WelcomePage />
+    </div>
+  );
 }
 
 export default App;

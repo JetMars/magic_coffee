@@ -1,0 +1,44 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-wrap {
+  background-color: #324a59;
+  width: 100%;
+}
+
+.title {
+  color: #181d2d;
+  margin: 3.4rem 0 0 0;
+  width: 239px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.descr {
+  color: #aaa;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 4.9rem;
+}
+
+.dot-active {
+  width: 33px;
+  height: 10px;
+  border-radius: 50px;
+  background: #324a59;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background: rgba(50, 74, 89, 0.2);
+}
