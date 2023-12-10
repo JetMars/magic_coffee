@@ -1,14 +1,16 @@
 import React from "react";
 
-import arrow from "../../assets/img/arrows/arrow-left.svg";
+import { Link } from "react-router-dom";
+
+import arrow from "assets/img/arrows/arrow-left.svg";
 
 import styles from "./BackPage.module.scss";
 
 const BackPage: React.FC = () => {
   return (
-    <button className={styles.btn}>
+    <Link to="/" className={styles.btn}>
       <img className={styles["arrow-back"]} src={arrow} alt="arrow-back" />
-    </button>
+    </Link>
   );
 };
 

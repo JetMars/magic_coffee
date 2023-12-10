@@ -1,6 +1,8 @@
 import React from "react";
 
-import arrow from "../../assets/img/arrows/arrow-next.svg";
+import { Link } from "react-router-dom";
+
+import arrow from "assets/img/arrows/arrow-next.svg";
 
 import styles from "./NextPage.module.scss";
 
@@ -10,9 +12,9 @@ interface IMargin {
 
 const NextPage: React.FC<IMargin> = ({ margin }) => {
   return (
-    <button className={`${styles.btn} ${styles[margin]}`}>
+    <Link to="/authorization" className={`${styles.btn} ${styles[margin]}`}>
       <img className={styles["arrow-next"]} src={arrow} alt="arrow-next" />
-    </button>
+    </Link>
   );
 };
 

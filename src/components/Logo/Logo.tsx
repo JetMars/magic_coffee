@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./Logo.module.scss";
-import logo from "../../assets/img/logo.png";
+import logo from "assets/img/logo.png";
 
 const Logo: React.FC = () => {
   return (

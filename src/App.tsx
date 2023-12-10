@@ -1,12 +1,14 @@
-// import WelcomePage from "./components/WelcomePage/WelcomePage";
+import { Route, Routes } from "react-router-dom";
 
-import AuthorizationPage from "./components/AuthorizationPage/AuthorizationPage";
+import { WelcomePage, AuthorizationPage } from "./pages";
 
 function App() {
   return (
     <div className="container">
-      {/* <WelcomePage /> */}
-      <AuthorizationPage />
+      <Routes>
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/authorization" element={<AuthorizationPage />} />
+      </Routes>
     </div>
   );
 }

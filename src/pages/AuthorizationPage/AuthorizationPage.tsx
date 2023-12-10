@@ -1,13 +1,11 @@
 import React from "react";
 
-import BackPage from "../BackPage/BackPage";
+import { BackPage, NextPage } from "components";
 
-import email from "../../assets/img/svg/authorization/Message.svg";
-import password from "../../assets/img/svg/authorization/Lock.svg";
+import email from "assets/img/svg/authorization/Message.svg";
+import password from "assets/img/svg/authorization/Lock.svg";
 
 import styles from "./AuthorizationPage.module.scss";
-
-import NextPage from "../NextPage/NextPage";
 
 const AuthorizationPage: React.FC = () => {
   return (

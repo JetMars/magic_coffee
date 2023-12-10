@@ -1,10 +1,18 @@
 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 64px;
   height: 64px;
   background-color: #324a59;
   border-radius: 50%;
   border: 1px solid #324a59;
   align-self: end;
+}
+
+.arrow-next {
+  display: block;
+  object-fit: cover;
 }
 
 .welcome-page {

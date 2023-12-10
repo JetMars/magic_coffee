@@ -1,9 +1,8 @@
 import React from "react";
 
-import Logo from "../Logo/Logo";
+import { Logo, NextPage } from "components";
 
 import styles from "./WelcomePage.module.scss";
-import NextPage from "../NextPage/NextPage";
 
 const WelcomePage: React.FC = () => {
   return (
