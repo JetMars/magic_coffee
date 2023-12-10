@@ -1,9 +1,12 @@
-import WelcomePage from "./components/WelcomePage/WelcomePage";
+// import WelcomePage from "./components/WelcomePage/WelcomePage";
+
+import AuthorizationPage from "./components/AuthorizationPage/AuthorizationPage";
 
 function App() {
   return (
     <div className="container">
-      <WelcomePage />
+      {/* <WelcomePage /> */}
+      <AuthorizationPage />
     </div>
   );
 }
