@@ -1,9 +1,8 @@
 import React from "react";
 
-import { BackPage, NextPage } from "components";
+import { BackPage, NextPage, PasswordInput } from "components";
 
 import email from "assets/img/svg/authorization/Message.svg";
-import password from "assets/img/svg/authorization/Lock.svg";
 
 import styles from "./AuthorizationPage.module.scss";
 
@@ -22,10 +21,7 @@ const AuthorizationPage: React.FC = () => {
           <input type="email" placeholder="Email address" />
         </div>
         <div className={styles["form-wrap"]}>
-          <div className={styles["form-image"]}>
-            <img src={password} alt="password" />
-          </div>
-          <input type="password" placeholder="Password" />
+          <PasswordInput />
         </div>
       </form>
       <div className={styles["password-restore"]}>
