@@ -1,16 +1,17 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 
-import { WelcomePage, AuthorizationPage } from "./pages";
+import { AuthorizationPage, RegistrationPage, WelcomePage } from './pages';
 
 function App() {
-  return (
-    <div className="container">
-      <Routes>
-        <Route path="/" element={<WelcomePage />} />
-        <Route path="/authorization" element={<AuthorizationPage />} />
-      </Routes>
-    </div>
-  );
+	return (
+		<div className='container'>
+			<Routes>
+				<Route path='/' element={<WelcomePage />} />
+				<Route path='/authorization' element={<AuthorizationPage />} />
+				<Route path='/registration' element={<RegistrationPage />} />
+			</Routes>
+		</div>
+	);
 }
 
 export default App;
