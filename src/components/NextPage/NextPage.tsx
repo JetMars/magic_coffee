@@ -1,21 +1,20 @@
-import React from "react";
+import React from 'react';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import arrow from "assets/img/arrows/arrow-next.svg";
+import arrow from 'assets/img/arrows/arrow-next.svg';
 
-import styles from "./NextPage.module.scss";
+import styles from './NextPage.module.scss';
 
-interface IMargin {
-  margin: string;
-}
-
-const NextPage: React.FC<IMargin> = ({ margin }) => {
-  return (
-    <Link to="/authorization" className={`${styles.btn} ${styles[margin]}`}>
-      <img className={styles["arrow-next"]} src={arrow} alt="arrow-next" />
-    </Link>
-  );
+const NextPage: React.FC<{ margin: string; link: string }> = ({
+	margin,
+	link,
+}) => {
+	return (
+		<Link to={`/${link}`} className={`${styles.btn} ${styles[margin]}`}>
+			<img className={styles['arrow-next']} src={arrow} alt='arrow-next' />
+		</Link>
+	);
 };
 
 export default NextPage;

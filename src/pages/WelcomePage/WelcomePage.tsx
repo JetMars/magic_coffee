@@ -17,7 +17,7 @@ const WelcomePage: React.FC = () => {
 				<div className={styles.dot}></div>
 				<div className={styles.dot}></div>
 			</div>
-			<NextPage margin='welcome-page' />
+			<NextPage margin='welcome-page' link='authorization' />
 		</section>
 	);
 };

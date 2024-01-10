@@ -1,103 +1,53 @@
 .authorization {
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  &-title {
-    color: #181d2d;
-    margin: 4.6rem 0 0 2.5rem;
-    font-size: 2.2rem;
-    font-weight: 500;
-  }
-  &-greeting {
-    color: #aaa;
-    margin: 2.4rem 0 0 2.5rem;
-    font-size: 14px;
-    font-weight: 400;
-  }
+	display: flex;
+	flex-direction: column;
+	padding: 0 20px;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 4.5rem;
-  margin-left: 2.5rem;
-  width: 286px;
-  &-wrap {
-    display: flex;
-    position: relative;
-    margin: 0;
-    margin-top: 35px;
-    gap: 30px;
-    border-bottom: 1px solid #c1c7d0;
-    padding-bottom: 9px;
-    &:nth-child(1) {
-      margin-top: 0;
-    }
-  }
-  &-image {
-    position: relative;
-    margin-left: 10px;
-    width: 18px;
-    height: 18px;
-    img {
-      display: block;
-      object-fit: cover;
-    }
-    &::after {
-      display: block;
-      position: absolute;
-      content: "";
-      width: 25px;
-      top: 10px;
-      left: 16px;
-      border-bottom: 0.5px solid #c1c7d0;
-      transform: rotate(90deg);
-    }
-  }
-}
-
-input[type="email"],
-input[type="password"],
-input[type="text"] {
-  display: block;
-  border: none;
-  padding-top: 2px;
-  width: 100%;
-  font-size: 12px;
-  &::placeholder {
-    color: #c1c7d0;
-    font-size: 12px;
-    font-weight: 500;
-  }
-  &:focus {
-    outline: 1px solid #c1c7d0;
-  }
+	display: flex;
+	flex-direction: column;
+	margin-top: 4.5rem;
+	margin-left: 2.5rem;
+	width: 286px;
+	&-wrap {
+		display: flex;
+		position: relative;
+		margin: 0;
+		margin-top: 35px;
+		gap: 30px;
+		border-bottom: 1px solid #c1c7d0;
+		padding-bottom: 9px;
+		&:nth-child(1) {
+			margin-top: 0;
+		}
+	}
 }
 
 .password-restore {
-  text-align: center;
-  .restore-link {
-    display: inline-block;
-    color: #324a59;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 13px;
-    margin-top: 32px;
-    text-decoration: none;
-    border-bottom: 1px solid #324a59;
-  }
+	text-align: center;
+	.restore-link {
+		display: inline-block;
+		color: #324a59;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 13px;
+		margin-top: 32px;
+		text-decoration: none;
+		border-bottom: 1px solid #324a59;
+	}
 }
 
 .sign-up {
-  margin-left: 2.5rem;
-  margin-bottom: 7rem;
-  color: #aaa;
-  font-size: 14px;
-  font-weight: 400;
-  a {
-    color: #324a59;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-  }
+	margin-left: 2.5rem;
+	margin-bottom: 7rem;
+	color: #aaa;
+	font-size: 14px;
+	font-weight: 400;
+	a {
+		color: #324a59;
+		font-size: 14px;
+		font-weight: 500;
+		text-decoration: none;
+	}
 }

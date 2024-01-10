@@ -1,4 +1,23 @@
 .container {
-  margin: 0 auto;
-  margin-top: 20px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+input[type='email'],
+input[type='password'],
+input[type='text'],
+input[type='tel'] {
+	display: block;
+	border: none;
+	padding-top: 2px;
+	width: 100%;
+	font-size: 12px;
+	&::placeholder {
+		color: #c1c7d0;
+		font-size: 12px;
+		font-weight: 500;
+	}
+	&:focus {
+		outline: 1px solid #c1c7d0;
+	}
 }
