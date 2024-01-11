@@ -50,7 +50,7 @@ const RegistrationPage: React.FC = () => {
 			<div className={styles.agreement}>
 				<a href='/#'>By signing up you agree with our Terms of Use</a>
 			</div>
-			<NextPage margin='registration-page' link='' />
+			<NextPage margin='registration-page' link='welcome' />
 			<div className={styles['sign-up']}>
 				Already a member?
 				<a href=''> Sign in</a>
