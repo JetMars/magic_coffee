@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { motion } from 'framer-motion';
+
 import {
 	BackPage,
 	Description,
@@ -13,7 +15,13 @@ import styles from './AuthorizationPage.module.scss';
 
 const AuthorizationPage: React.FC = () => {
 	return (
-		<section className={styles.authorization}>
+		<motion.section
+			className={styles.authorization}
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 0.5 }}
+		>
 			<BackPage />
 			<Title title='Sing in' />
 			<Description desc='Welcome back' />
@@ -42,7 +50,7 @@ const AuthorizationPage: React.FC = () => {
 				New member?
 				<a href=''> Sign up</a>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 

@@ -1,0 +1,99 @@
+.menu {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 2.5rem;
+	.welcome {
+		&-massage {
+			color: #d8d8d8;
+			font-size: 1.4rem;
+			font-weight: 500;
+			margin: 0;
+		}
+		&-name {
+			color: #001833;
+			font-size: 1.8rem;
+			font-weight: 500;
+			margin: 0;
+		}
+	}
+}
+.nav {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	&-cart {
+		background-color: #fff;
+		border: 0;
+		outline: 0;
+		padding: 0;
+	}
+	&-profile {
+		background-color: #fff;
+		border: 0;
+		outline: 0;
+	}
+}
+
+.select {
+	border-radius: 25px 25px 0px 0px;
+	background: #324a59;
+	padding: 0 2.5rem 2.2rem 2.5rem;
+	margin-top: 0.7rem;
+	&-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.6rem;
+		margin-top: 2.4rem;
+	}
+	&-title {
+		color: #d8d8d8;
+		padding-top: 1.6rem;
+		margin-left: 0.3rem;
+		font-size: 1.6rem;
+		font-weight: 500;
+	}
+	&__nav {
+		border-radius: 20px;
+		box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.12);
+		background-color: #fff;
+		margin-top: 1.6rem;
+		&-lists {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 2.2rem 5.6rem;
+			margin: 0;
+		}
+		&-list {
+			list-style-type: none;
+		}
+	}
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 15px;
+	width: 154px;
+	height: 164px;
+	background: #f7f8fb;
+	&-block {
+		margin-top: 2rem;
+		width: 114px;
+		height: 85px;
+		img {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			object-position: center;
+		}
+	}
+	&-title {
+		color: #001833;
+		margin-top: 1.2rem;
+		font-family: DM Sans;
+		font-size: 14px;
+		font-weight: 500;
+		letter-spacing: -0.2px;
+	}
+}

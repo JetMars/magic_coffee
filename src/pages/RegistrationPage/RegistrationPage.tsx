@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { motion } from 'framer-motion';
+
 import { Description, Input, NextPage, PasswordInput, Title } from 'components';
 import BackPage from 'components/BackPage/BackPage';
 import styles from './RegistrationPage.module.scss';
@@ -30,7 +32,13 @@ const inputs: Input[] = [
 
 const RegistrationPage: React.FC = () => {
 	return (
-		<div className={styles.registration}>
+		<motion.section
+			className={styles.registration}
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 0.5 }}
+		>
 			<BackPage />
 			<Title title='Sign up' />
 			<Description desc='Create on account here' />
@@ -55,7 +63,7 @@ const RegistrationPage: React.FC = () => {
 				Already a member?
 				<a href=''> Sign in</a>
 			</div>
-		</div>
+		</motion.section>
 	);
 };
 
