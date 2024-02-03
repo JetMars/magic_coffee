@@ -1,3 +1,4 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { AnimatePresence } from 'framer-motion';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
@@ -11,18 +12,24 @@ import {
 
 function App() {
 	const location = useLocation();
+
+	const queryClient = new QueryClient();
+
 	return (
-		<div className='container'>
-			<AnimatePresence>
-				<Routes location={location} key={location.pathname}>
-					<Route path='/' element={<WelcomePage />} />
-					<Route path='/authorization' element={<AuthorizationPage />} />
-					<Route path='/registration' element={<RegistrationPage />} />
-					<Route path='/welcome' element={<StartupScreenPage />} />
-					<Route path='/menu' element={<Menu />} />
-				</Routes>
-			</AnimatePresence>
-		</div>
+		<QueryClientProvider client={queryClient}>
+			<div className='container'>
+				<AnimatePresence>
+					<Routes location={location} key={location.pathname}>
+						<Route path='/' element={<WelcomePage />} />
+						<Route path='/authorization' element={<AuthorizationPage />} />
+						<Route path='/registration' element={<RegistrationPage />} />
+						<Route path='/welcome' element={<StartupScreenPage />} />
+						<Route path='/menu' element={<Menu />} />
+						<Route path='/menu/:id' element={<div>HEllO world</div>} />
+					</Routes>
+				</AnimatePresence>
+			</div>
+		</QueryClientProvider>
 	);
 }
 

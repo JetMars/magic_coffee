@@ -1,4 +1,9 @@
+import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+
+import { Card, NotFound, Spinner } from 'components';
+
+import { getFetchData } from '../../services/fetchData';
 
 import Cart from '../../assets/img/menu/cart.svg?react';
 import Profile from '../../assets/img/menu/profile.svg?react';
@@ -6,12 +11,31 @@ import List from '../../assets/img/select/list.svg?react';
 import Present from '../../assets/img/select/present.svg?react';
 import Shop from '../../assets/img/select/shop.svg?react';
 
-import cappuccino from 'assets/img/card/cappuccino.png';
-import coffee from 'assets/img/card/coffee.png';
-
 import styles from './Menu.module.scss';
 
 const Menu: React.FC = () => {
+	const { data, isLoading, isError, isSuccess, error } = useQuery({
+		queryKey: ['items'],
+		queryFn: getFetchData,
+	});
+
+	let renderItems;
+
+	if (isError) {
+		renderItems = <NotFound />;
+		console.log(error);
+	}
+
+	if (isLoading) {
+		renderItems = <Spinner />;
+	}
+
+	if (isSuccess) {
+		renderItems = data.map(item => {
+			return <Card key={item.id} {...item} />;
+		});
+	}
+
 	return (
 		<>
 			<div className={styles.menu}>
@@ -32,35 +56,7 @@ const Menu: React.FC = () => {
 			<div className={styles.select}>
 				<div className={styles['select-title']}>Select your coffee</div>
 
-				<div className={styles['select-wrap']}>
-					<div className={styles.card}>
-						<div className={styles['card-block']}>
-							<img src={coffee} alt='coffee' />
-						</div>
-						<div className={styles['card-title']}>Americano</div>
-					</div>
-
-					<div className={styles.card}>
-						<div className={styles['card-block']}>
-							<img src={cappuccino} alt='cappuccino' />
-						</div>
-						<div className={styles['card-title']}>Cappuccino</div>
-					</div>
-
-					<div className={styles.card}>
-						<div className={styles['card-block']}>
-							<img src={coffee} alt='coffee' />
-						</div>
-						<div className={styles['card-title']}>Americano</div>
-					</div>
-
-					<div className={styles.card}>
-						<div className={styles['card-block']}>
-							<img src={coffee} alt='coffee' />
-						</div>
-						<div className={styles['card-title']}>Americano</div>
-					</div>
-				</div>
+				<div className={styles['select-wrap']}>{renderItems}</div>
 
 				<div className={styles['select__nav']}>
 					<ul className={styles['select__nav-lists']}>
