@@ -5,11 +5,15 @@ import styles from './NotFound.module.scss';
 import NotFoundSvg from '../../assets/img/not_found/404.svg?react';
 import CoffeeSvg from '../../assets/img/not_found/coffee.svg?react';
 
-const NotFound: React.FC = () => {
+interface INotFoundProps {
+	color: string;
+}
+
+const NotFound: React.FC<INotFoundProps> = ({ color }) => {
 	return (
 		<div className={styles.error}>
 			<div className={styles.block}>
-				<h1 className={styles.title}>Failed to loading data</h1>
+				<h1 className={styles[`${color}`]}>Failed to loading data</h1>
 				<CoffeeSvg />
 			</div>
 			<NotFoundSvg />

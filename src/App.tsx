@@ -5,6 +5,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import {
 	AuthorizationPage,
 	Menu,
+	OrderCard,
 	RegistrationPage,
 	StartupScreenPage,
 	WelcomePage,
@@ -25,7 +26,7 @@ function App() {
 						<Route path='/registration' element={<RegistrationPage />} />
 						<Route path='/welcome' element={<StartupScreenPage />} />
 						<Route path='/menu' element={<Menu />} />
-						<Route path='/menu/:id' element={<div>HEllO world</div>} />
+						<Route path='/menu/:id' element={<OrderCard />} />
 					</Routes>
 				</AnimatePresence>
 			</div>

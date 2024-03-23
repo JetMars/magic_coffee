@@ -1,15 +1,14 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 
-import { Card, NotFound, Spinner } from 'components';
+import { Card, ItemCart, NotFound, Spinner } from 'components';
 
-import { getFetchData } from '../../services/fetchData';
+import { getFetchData } from 'services/fetchData';
 
-import Cart from '../../assets/img/menu/cart.svg?react';
-import Profile from '../../assets/img/menu/profile.svg?react';
-import List from '../../assets/img/select/list.svg?react';
-import Present from '../../assets/img/select/present.svg?react';
-import Shop from '../../assets/img/select/shop.svg?react';
+import Profile from 'assets/img/menu/profile.svg?react';
+import List from 'assets/img/select/list.svg?react';
+import Present from 'assets/img/select/present.svg?react';
+import Shop from 'assets/img/select/shop.svg?react';
 
 import styles from './Menu.module.scss';
 
@@ -22,7 +21,7 @@ const Menu: React.FC = () => {
 	let renderItems;
 
 	if (isError) {
-		renderItems = <NotFound />;
+		renderItems = <NotFound color='white' />;
 		console.log(error);
 	}
 
@@ -45,7 +44,7 @@ const Menu: React.FC = () => {
 				</div>
 				<div className={styles['nav']}>
 					<button className={styles['nav-cart']}>
-						<Cart />
+						<ItemCart />
 					</button>
 					<button className={styles['nav-profile']}>
 						<Profile />
